@@ -40,7 +40,7 @@ body.personal-site .personal-shell :is(h1, h2, h3, h4, h5, h6, p, a, button, inp
 }
 body.personal-site { margin: 0; padding: 0; line-height: 1.7; }
 h1, h2, h3 { color: var(--personal-heading); }
-.personal-shell { display: grid; grid-template-columns: 270px minmax(0, 1fr); max-width: 1160px; margin: 0 auto; min-height: 100vh; }
+.personal-shell { display: grid; grid-template-columns: 270px minmax(0, 1fr); max-width: 1280px; margin: 0 auto; min-height: 100vh; }
 .profile-sidebar { background: var(--personal-sidebar); border-right: 1px solid var(--global-divider-color); padding: 48px 32px; }
 .sidebar-inner { position: sticky; top: 40px; }
 .profile-photo { display: block; width: 180px; height: 180px; border-radius: 50%; overflow: hidden; background: var(--personal-soft); box-shadow: 0 0 0 6px var(--personal-sidebar), 0 0 0 7px var(--global-divider-color); margin: 0 0 32px; }
