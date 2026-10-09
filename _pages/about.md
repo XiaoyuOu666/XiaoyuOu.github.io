@@ -1,34 +1,13 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: Ph.D. Student at University of Bristol
-
-profile:
-  align: right
-  image: XiaoyuOu.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Merchant Venturers Building</p>
-    <p>Woodland Rd, Clifton, BS8 1UB</p>
-    <p>Bristol</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+subtitle: PhD Candidate in Electrical and Electronic Engineering
+selected_papers: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a PhD candidate in Electrical and Electronic Engineering at the University of Bristol, United Kingdom, and a member of the Communication Systems and Networks (CSN) Group. I am supervised by Dr. Shuping Dang and Prof. Angela Doufexi.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research focuses on resource allocation and transceiver design for multiuser MIMO systems in the finite-blocklength regime, with an emphasis on ultra-reliable low-latency communications (URLLC). I use convex optimization techniques to develop low-complexity resource allocation algorithms for multiple access schemes, including rate-splitting multiple access (RSMA) and non-orthogonal multiple access (NOMA). I also work on implementing these algorithms on software-defined radio (SDR) testbeds, connecting theoretical development with over-the-air experimentation.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before joining Bristol, I received my MSc in Information and Communication Engineering in 2023 and my BEng in Electronic Science and Technology in 2020, both from Chongqing University of Posts and Telecommunications. During my MSc, I was supervised by Prof. Xianzhong Xie.

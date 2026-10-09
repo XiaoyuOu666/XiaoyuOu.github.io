@@ -1,5 +1,8 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
+{% unless site.enable_darkmode %}
+  <script src="{{ '/assets/js/fixed-theme.js' | relative_url | bust_file_cache }}"></script>
+{% endunless %}
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
@@ -35,7 +38,7 @@
 <link
   defer
   rel="stylesheet"
-  href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}"
+  href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
   media=""
   id="highlight_theme_light"
 >

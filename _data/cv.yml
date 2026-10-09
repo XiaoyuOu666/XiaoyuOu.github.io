@@ -1,97 +1,99 @@
-- title: General Information
+- title: Profile
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: Name
+      value: Xiaoyu Ou
+    - name: Position
+      value: PhD Candidate in Electrical and Electronic Engineering
+    - name: Institution
+      value: University of Bristol, United Kingdom
+    - name: Email
+      value: '<a href="mailto:xiaoyu.ou@bristol.ac.uk">xiaoyu.ou@bristol.ac.uk</a>'
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Electrical and Electronic Engineering
+      institution: University of Bristol
+      year: 2023–present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "Fully funded by the University of Bristol."
+        - "Thesis: Transceiver Design and Resource Allocation for Finite-Blocklength Multiuser MIMO Communications."
+        - "Supervisors: Dr. Shuping Dang and Prof. Angela Doufexi."
+        - "Expected thesis submission: November 2026; expected viva: before February 2027."
+    - title: MSc in Information and Communication Engineering
+      institution: Chongqing University of Posts and Telecommunications
+      year: 2020–2023
       description:
-        - Description 1.
-        - Description 2.
+        - "Supervisor: Prof. Xianzhong Xie."
+    - title: BEng in Electronic Science and Technology
+      institution: Chongqing University of Posts and Telecommunications
+      year: 2016–2020
 
-- title: Experience
+- title: Research Experience
+  type: nested_list
+  contents:
+    - title: Multiuser transmission and interference management
+      items:
+        - Uplink RSMA with finite SIC, massive MIMO-NOMA with group-level SIC, and dual-polarized transmission without SIC.
+        - Power-control and receiver-design algorithms for multiuser wireless systems.
+    - title: Resource allocation for short-packet communications
+      items:
+        - Joint user scheduling, power allocation, and rate control for multicarrier RSMA.
+        - Metadata and payload encoding in massive MIMO, with power, receive combining, and blocklength optimization.
+    - title: Infinite-to-finite blocklength mismatch
+      items:
+        - Sum-rate loss when allocations designed for infinite blocklength are applied to finite-blocklength transmission.
+    - title: Practical implementation
+      items:
+        - USRP X310 testbed development using Python/UHD and MATLAB.
+        - Device synchronization, channel estimation, multiuser precoding, and over-the-air testing.
+
+- title: Teaching Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Teaching Assistant
+      institution: University of Bristol
+      year: Feb.–May 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+        - Helped supervise the undergraduate group project Covert Communications via Motion States of Unmanned Aerial Vehicle.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Outstanding Master's Thesis of Chongqing
+      year: "2024"
+    - title: University of Bristol PhD Scholarship in Electrical and Electronic Engineering
+      year: "2023"
+    - title: Outstanding Graduate of Chongqing
+      year: "2023"
+    - title: National Scholarship
+      institution: Ministry of Education of China
+      year: "2022"
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Academic Service
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "Journal reviewer: IEEE Transactions on Communications."
+    - "Journal reviewer: IEEE Transactions on Wireless Communications."
+    - "Journal reviewer: IEEE Transactions on Vehicular Technology."
+    - "Journal reviewer: IEEE Communications Letters."
+    - "Journal reviewer: IEEE Wireless Communications Letters."
+
+- title: Technical Skills
+  type: list
+  contents:
+    - MATLAB; Python/UHD; USRP X310.
+    - Convex optimization; theoretical analysis and modeling.
+
+- title: Future Research Interests
+  type: list
+  contents:
+    - Finite-blocklength information theory and its applications.
+    - Fast optimization algorithms for wireless signal processing.
+    - FPGA implementation of signal-processing and optimization algorithms, validated through USRP experiments.
+
+- title: Publications
+  type: list
+  contents:
+    - '<a href="../publications/">View all 12 journal articles, 1 conference paper, and 1 manuscript under review.</a>'

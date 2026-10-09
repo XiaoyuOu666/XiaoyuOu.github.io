@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ site.lang }}" data-theme="dark" data-theme-setting="dark">
   <!-- Head -->
   <head>
     {% if page.redirect %}
@@ -13,15 +13,18 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+    <script src="{{ '/assets/js/sidebar-motion.js' | relative_url | bust_file_cache }}"></script>
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="personal-site">
+    <div class="personal-shell">
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="personal-main">
+    <main class="container personal-content" id="main-content">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -45,10 +48,12 @@
       {% else %}
         {{ content }}
       {% endif %}
-    </div>
+    </main>
 
     <!-- Footer -->
     {% include footer.liquid %}
+    </div>
+    </div>
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}

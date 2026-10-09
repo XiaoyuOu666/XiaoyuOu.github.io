@@ -1,9 +1,9 @@
-<ul class="card-text font-weight-light list-group list-group-flush">
+<ul class="cv-topic-list">
   {% for content in entry.contents %}
-    <li class="list-group-item">
-      <h5 class="font-italic">{{ content.title }}</h5>
+    <li class="cv-topic">
+      <h3 class="cv-entry-title">{{ content.title }}</h3>
       {% if content.items %}
-        <ul class="subitems">
+        <ul class="cv-entry-details">
           {% for subitem in content.items %}
             <li>
               <span class="subitem">{{ subitem }}</span>
