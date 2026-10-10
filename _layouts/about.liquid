@@ -6,10 +6,9 @@ layout: default
   <section class="home-section" aria-labelledby="directions-heading">
     <div class="section-heading"><h2 id="directions-heading">Research directions</h2>{% include section_link.liquid url='/research/' label='Explore my research' %}</div>
     <div class="focus-grid">
-      <div><span class="focus-number" aria-hidden="true">01</span><h3>Finite-Blocklength Communications and URLLC</h3><p>Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.</p></div>
-      <div><span class="focus-number" aria-hidden="true">02</span><h3>Multiuser MIMO and Interference Management</h3><p>Designing multiuser MIMO transceivers for RSMA and NOMA to manage inter-user interference and improve transmission efficiency.</p></div>
-      <div><span class="focus-number" aria-hidden="true">03</span><h3>Low-Complexity Resource Optimization</h3><p>Developing low-complexity algorithms for precoding/combining, power control/allocation using convex optimization techniques.</p></div>
-      <div><span class="focus-number" aria-hidden="true">04</span><h3>SDR Prototyping and Over-the-Air Validation</h3><p>Implementing multiuser transmission and resource allocation algorithms on software-defined radio testbeds to evaluate their performance under practical wireless conditions.</p></div>
+      {% for direction in site.data.research %}
+      <div><span class="focus-number" aria-hidden="true">{{ direction.number }}</span><h3>{{ direction.title }}</h3><p>{{ direction.description }}</p></div>
+      {% endfor %}
     </div>
   </section>
   {% if page.selected_papers %}
