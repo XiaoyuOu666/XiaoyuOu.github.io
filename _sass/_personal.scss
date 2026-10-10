@@ -223,9 +223,8 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-platforms { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
 .research-platforms li { font-size: .82rem; padding: 4px 10px; border: 1px solid #484848; border-radius: 6px; color: var(--global-text-color-light); }
 .research-next { border-top: 1px solid var(--global-divider-color); padding-top: 32px; }
-.research-next h2 { font-size: 1.4rem; line-height: 1.35; margin: 12px 0 14px; }
-.research-next p { color: var(--global-text-color-light); font-size: .9rem; line-height: 1.85; margin-bottom: 18px; }
-.research-email { display: inline-block; font-size: .9rem; border-bottom: 1px solid #606060; text-decoration: none; }
+.research-next h2 { font-size: 1.4rem; line-height: 1.35; margin: 0 0 14px; }
+.research-next p { color: var(--global-text-color-light); font-size: .9rem; line-height: 1.85; margin: 0; }
 @media (max-width: 650px) {
   .research-direction { padding: 30px 0; }
   .research-submodule.module-hover::before { inset: -10px -8px; }

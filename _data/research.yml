@@ -4,7 +4,7 @@
   description: Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.
   work:
     - studying reliability–latency–throughput trade-offs under finite blocklength constraints.
-    - Optimizing short-packet encoding and resource allocation in massive MIMO and multicarrier RSMA systems.
+    - Optimizing short-packet encoding and resource allocation in massive MIMO and RSMA systems.
     - Quantifying sum-rate loss when infinite-blocklength resource allocations are used under finite-blocklength constraints.
   papers:
     - key: ou2026reliable
