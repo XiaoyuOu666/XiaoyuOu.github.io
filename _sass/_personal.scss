@@ -99,6 +99,9 @@ h1, h2, h3 { color: var(--personal-heading); }
 .bio p { font-size: .9rem; color: var(--global-text-color-light); margin: 0 0 14px; }
 .bio p:last-child { margin-bottom: 0; }
 .bio strong { color: var(--global-text-color); font-weight: 400; }
+.bio .academic-link, .intro-affiliation .academic-link { color: #fff; text-decoration: none; }
+.bio .academic-link:hover, .bio .academic-link:focus-visible,
+.intro-affiliation .academic-link:hover, .intro-affiliation .academic-link:focus-visible { color: #fff; text-decoration: underline; text-underline-offset: .2em; }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
 .section-heading > a { font-size: .75rem; text-align: right; }
 .focus-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
