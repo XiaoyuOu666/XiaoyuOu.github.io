@@ -111,7 +111,18 @@ h1, h2, h3 { color: var(--personal-heading); }
 .bio .academic-link:hover, .bio .academic-link:focus-visible,
 .intro-affiliation .academic-link:hover, .intro-affiliation .academic-link:focus-visible { color: #fff; text-decoration: underline; text-underline-offset: .2em; }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
-.section-heading > a { font-size: .75rem; text-align: right; }
+.section-link { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; padding: 5px 6px 5px 12px; border: 1px solid #454545; border-radius: 999px; background: transparent; color: #d5d5d5; font-size: .75rem; line-height: 1.35; text-decoration: none; transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease; }
+.section-link-label { min-width: 0; }
+.section-link-icon { display: grid; place-items: center; flex: 0 0 24px; width: 24px; height: 24px; border: 1px solid #484848; border-radius: 50%; background: #242424; color: #d5d5d5; transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
+.section-link-icon svg { display: block; transition: transform .2s ease; }
+.section-link:focus-visible { border-color: #777; background: #252525; color: #fff; text-decoration: none; box-shadow: 0 4px 14px var(--personal-shadow); }
+.section-link:focus-visible .section-link-icon { border-color: #ececec; background: #ececec; color: #171717; }
+.section-link:focus-visible .section-link-icon svg { transform: translateX(2px); }
+@media (hover: hover) and (pointer: fine) {
+  .section-link:hover { border-color: #777; background: #252525; color: #fff; text-decoration: none; box-shadow: 0 4px 14px var(--personal-shadow); }
+  .section-link:hover .section-link-icon { border-color: #ececec; background: #ececec; color: #171717; }
+  .section-link:hover .section-link-icon svg { transform: translateX(2px); }
+}
 .focus-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
 .focus-grid > div { display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 16px; padding: 14px 16px; margin: -14px -16px; border-radius: 10px; transition: background-color .2s ease; }
 .focus-number { display: grid; place-items: center; grid-row: 1 / span 2; width: 32px; height: 32px; box-sizing: border-box; margin-top: 1px; border: 1px solid #606060; border-radius: 9px; background: transparent; color: #ececec; font-size: 14px; line-height: 1; font-variant-numeric: tabular-nums; transition: border-color 180ms ease, background-color 180ms ease; }
@@ -125,7 +136,6 @@ h1, h2, h3 { color: var(--personal-heading); }
 .home-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 0; padding-bottom: 0; }
 .home-bottom h2 { font-size: 1.15rem; margin: 10px 0; }
 .home-bottom p { font-size: .85rem; color: var(--global-text-color-light); margin: 0; }
-.home-bottom > a { flex-shrink: 0; font-size: .78rem; }
 .post-header .post-title, .academic-home .bio h1 { font-size: 2.1rem; font-weight: 400; line-height: 1.2; letter-spacing: -.025em; }
 .personal-content .post-description { color: var(--global-text-color-light); }
 .personal-content .post-header { margin-bottom: 38px; }
@@ -283,10 +293,10 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .personal-content .post-header { margin-bottom: 30px; }
   .publications .publication-entry { padding: 12px 10px; margin: 0 -10px; }
   .focus-grid > div { padding: 12px 10px; margin: -12px -10px; }
-  .section-heading { align-items: flex-start; }
-  .section-heading > a { max-width: 110px; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 22px; }
+  .section-heading h2 { margin-bottom: 12px; }
   .home-bottom { display: block; }
-  .home-bottom > a { display: inline-block; margin-top: 15px; }
+  .home-bottom > a { display: inline-flex; margin-top: 18px; }
 }
 @media (max-width: 360px) {
   .profile-sidebar { padding-right: 22px; padding-left: 22px; }
@@ -297,6 +307,8 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
 }
 @media (prefers-reduced-motion: reduce) { .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
+  .section-link, .section-link-icon, .section-link-icon svg { transition: none; }
+  .section-link:hover .section-link-icon svg, .section-link:focus-visible .section-link-icon svg { transform: none; }
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
