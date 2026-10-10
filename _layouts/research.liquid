@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="post research-page">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+  <div class="research-overview">{{ content }}</div>
+  <nav class="research-pathway" aria-label="Explore the four research directions">
+    <ol>
+      {% for direction in site.data.research %}
+      <li><a href="#{{ direction.id }}"><span class="research-step">{{ direction.number }}</span><span class="research-stage">{{ direction.stage }}</span><span class="research-step-title">{{ direction.short_title }}</span></a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+  <div class="research-directions">
+    {% for direction in site.data.research %}
+    <section class="research-direction" id="{{ direction.id }}" aria-labelledby="{{ direction.id }}-heading">
+      <header class="research-direction-heading"><span class="focus-number" aria-hidden="true">{{ direction.number }}</span><h2 id="{{ direction.id }}-heading">{{ direction.title }}</h2></header>
+      <div class="research-direction-body">
+        <div class="research-direction-copy">
+          <p class="research-direction-intro">{{ direction.description }}</p>
+          <h3 class="research-label">Research activities</h3>
+          <ul class="research-work">{% for item in direction.work %}<li>{{ item }}</li>{% endfor %}</ul>
+          {% if direction.papers %}
+          <h3 class="research-label">Related work</h3>
+          <ul class="research-papers">
+            {% for paper in direction.papers %}
+            {% assign publication_url = '/publications/#' | append: paper.key %}
+            <li><a href="{{ publication_url | relative_url }}"><span class="research-paper-title">{{ paper.title }}</span><span class="research-paper-meta">{{ paper.venue }}{% if paper.year %} · {{ paper.year }}{% endif %}{% if paper.status %} · <span class="research-paper-status">{{ paper.status }}</span>{% endif %}</span></a></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <h3 class="research-label">Experimental platform</h3>
+          <ul class="research-platforms">{% for platform in direction.platforms %}<li>{{ platform }}</li>{% endfor %}</ul>
+          {% endif %}
+        </div>
+        <figure class="research-figure">
+          <span class="research-figure-label">Conceptual overview</span>
+          {% include research_diagram.liquid type=direction.figure %}
+          <figcaption>{{ direction.caption }}</figcaption>
+        </figure>
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+  <section class="research-next" aria-labelledby="ongoing-heading">
+    <span class="eyebrow">LOOKING AHEAD</span>
+    <h2 id="ongoing-heading">Ongoing research</h2>
+    <p>My ongoing interests include finite-blocklength information theory, fast optimization algorithms for wireless signal processing, and FPGA implementation. I aim to connect these developments with USRP experiments to compare practical performance with theoretical predictions.</p>
+    <a class="research-email" href="mailto:xiaoyu.ou@bristol.ac.uk">Email me</a>
+  </section>
+</div>
