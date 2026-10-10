@@ -13,11 +13,11 @@ layout: default
       <header class="research-direction-heading"><span class="focus-number" aria-hidden="true">{{ direction.number }}</span><h2 id="{{ direction.id }}-heading">{{ direction.title }}</h2></header>
       <p class="research-direction-intro">{{ direction.description }}</p>
       <div class="research-direction-body">
-        <div class="research-activities">
+        <div class="research-activities research-submodule module-hover">
           <h3 class="research-label">Research activities</h3>
           <ul class="research-work">{% for item in direction.work %}<li>{{ item }}</li>{% endfor %}</ul>
         </div>
-        <div class="research-references">
+        <div class="research-references research-submodule module-hover">
           {% if direction.papers %}
           <h3 class="research-label">Related work</h3>
           <ul class="research-papers">
