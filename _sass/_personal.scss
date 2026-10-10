@@ -164,11 +164,11 @@ h1, h2, h3 { color: var(--personal-heading); }
 .publications .links .btn { border-radius: 4px; font-size: .7rem; }
 .publications .publication-entry { scroll-margin-top: 24px; position: relative; padding: 14px 16px; margin: 0 -16px; border-radius: 10px; transition: background-color .2s ease; }
 .publications .publication-entry:hover, .publications .publication-entry:focus-within { background: var(--personal-paper-hover); }
-.publications.publication-page .publication-entry { isolation: isolate; background: transparent; }
-.publication-page .publication-entry::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; border: 1px solid transparent; border-radius: 10px; background: transparent; transition: background-color .2s ease, border-color .2s ease; }
-.publication-page .publication-entry:focus-within::before { background-color: #242424; border-color: #494949; }
+.publications.publication-list .publication-entry { isolation: isolate; background: transparent; }
+.publication-list .publication-entry::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; border: 1px solid transparent; border-radius: 10px; background: transparent; transition: background-color .2s ease, border-color .2s ease; }
+.publication-list .publication-entry:focus-within::before { background-color: #242424; border-color: #494949; }
 @media (hover: hover) and (pointer: fine) {
-  .publication-page .publication-entry:hover::before { background-color: #242424; border-color: #494949; }
+  .publication-list .publication-entry:hover::before { background-color: #242424; border-color: #494949; }
 }
 .publications .publication-entry:hover .doi-button, .publications .publication-entry:focus-within .doi-button { border-color: rgba(255, 255, 255, .4); background: rgba(255, 255, 255, .06); }
 .publications .ieee-citation { color: var(--global-text-color-light); font-size: .9rem; line-height: 1.8; margin: 0; }
@@ -316,7 +316,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 8px; }
   .contact-panel { padding: 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .module-hover::before, .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publication-page .publication-entry::before, .publications .ieee-citation .doi-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .module-hover::before, .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publication-list .publication-entry::before, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
   .section-link, .section-link-icon, .section-link-icon svg { transition: none; }
   .section-link:hover .section-link-icon svg, .section-link:focus-visible .section-link-icon svg { transform: none; }
