@@ -106,7 +106,8 @@ h1, h2, h3 { color: var(--personal-heading); }
 .section-heading > a { font-size: .75rem; text-align: right; }
 .focus-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
 .focus-grid > div { display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 16px; }
-.focus-icon { grid-row: 1 / span 2; padding-top: 1px; font-size: 24px; color: var(--global-text-color-light); line-height: 1.2; }
+.focus-icon { display: block; grid-row: 1 / span 2; width: 28px; height: 28px; margin-top: 1px; color: var(--global-text-color-light); fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.focus-icon-frame { stroke-opacity: .5; }
 .focus-grid h3 { font-size: 1rem; font-weight: 400; margin: 0 0 8px; }
 .focus-grid p { grid-column: 2; font-size: .84rem; color: var(--global-text-color-light); line-height: 1.7; margin: 0; }
 .eyebrow { display: block; font-size: .65rem; color: var(--global-text-color-light); letter-spacing: .12em; font-weight: 400; }

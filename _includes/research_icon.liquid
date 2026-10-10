@@ -1,0 +1,20 @@
+<svg class="focus-icon" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <rect class="focus-icon-frame" x="2" y="2" width="28" height="28" rx="8" />
+  {% case include.direction %}
+    {% when 'communications' %}
+      <path d="M8 16h3l2-5 5 10 2-5h4" />
+    {% when 'mimo' %}
+      <path d="M13 11h6M13 21h6M11 13v6M21 13v6" />
+      <circle cx="11" cy="11" r="2" />
+      <circle cx="21" cy="11" r="2" />
+      <circle cx="11" cy="21" r="2" />
+      <circle cx="21" cy="21" r="2" />
+    {% when 'allocation' %}
+      <path d="M8 12h4m4 0h8M8 20h10m4 0h2" />
+      <circle cx="14" cy="12" r="2" />
+      <circle cx="20" cy="20" r="2" />
+    {% when 'experiments' %}
+      <rect x="11" y="11" width="10" height="10" rx="2" />
+      <path d="M13 8v3m6-3v3M13 21v3m6-3v3M8 13h3m-3 6h3M21 13h3m-3 6h3" />
+  {% endcase %}
+</svg>
