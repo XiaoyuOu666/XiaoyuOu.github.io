@@ -3,12 +3,13 @@ layout: default
 ---
 <div class="post academic-home">
   <section class="home-section bio" aria-labelledby="about-heading"><h1 id="about-heading">About me</h1>{{ content }}</section>
-  <section class="home-section" aria-labelledby="focus-heading">
-    <div class="section-heading"><h2 id="focus-heading">Research focus</h2><a href="{{ '/research/' | relative_url }}">Explore my research &rarr;</a></div>
+  <section class="home-section" aria-labelledby="directions-heading">
+    <div class="section-heading"><h2 id="directions-heading">Research directions</h2><a href="{{ '/research/' | relative_url }}">Explore my research &rarr;</a></div>
     <div class="focus-grid">
-      <div><i class="focus-icon ti ti-wave-sine" aria-hidden="true"></i><h3>Reliable short packets</h3><p>Finite-blocklength transmission and resource allocation for ultra-reliable low-latency communications.</p></div>
-      <div><i class="focus-icon ti ti-antenna" aria-hidden="true"></i><h3>Multiuser wireless systems</h3><p>MIMO, rate-splitting multiple access, NOMA, and interference management.</p></div>
-      <div><i class="focus-icon ti ti-device-desktop-analytics" aria-hidden="true"></i><h3>From theory to the air</h3><p>USRP X310 testbeds, synchronization, channel estimation, and multiuser precoding.</p></div>
+      <div><i class="focus-icon ti ti-wave-sine" aria-hidden="true"></i><h3>Finite-blocklength communications &amp; URLLC</h3><p>Reliability, latency, and throughput trade-offs in short-packet transmission, including the mismatch between infinite- and finite-blocklength designs.</p></div>
+      <div><i class="focus-icon ti ti-antenna" aria-hidden="true"></i><h3>Multiuser MIMO transceiver design</h3><p>Transceiver design and interference management for RSMA, NOMA, and dual-polarized multiuser MIMO systems.</p></div>
+      <div><i class="focus-icon ti ti-adjustments" aria-hidden="true"></i><h3>Low-complexity resource allocation</h3><p>Convex optimization for joint user scheduling, power allocation, rate control, receive combining, and blocklength design.</p></div>
+      <div><i class="focus-icon ti ti-device-desktop-analytics" aria-hidden="true"></i><h3>SDR implementation &amp; experimental validation</h3><p>Implementing multiuser transmission algorithms on USRP X310 testbeds using Python/UHD and MATLAB, with over-the-air performance evaluation.</p></div>
     </div>
   </section>
   {% if page.selected_papers %}
