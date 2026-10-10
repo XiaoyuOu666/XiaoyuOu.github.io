@@ -193,8 +193,8 @@ h1, h2, h3 { color: var(--personal-heading); }
 .contact-module > p { margin: 0; }
 .research-contact { border-top: 1px solid var(--global-divider-color); padding-top: 22px; margin-top: 35px; }
 .research-page .post-header { margin-bottom: 20px; }
-.research-page .post-description { font-size: .9rem; max-width: 640px; }
-.research-overview { max-width: 740px; font-size: .9rem; line-height: 1.85; color: var(--global-text-color-light); }
+.research-page .post-description { font-size: .9rem; }
+.research-overview { font-size: .9rem; line-height: 1.85; color: var(--global-text-color-light); }
 .research-overview p { margin: 0; }
 .research-directions { margin-top: 32px; }
 .research-direction { padding: 36px 0 40px; border-top: 1px solid var(--global-divider-color); scroll-margin-top: 28px; }
@@ -205,7 +205,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-activities, .research-references { min-width: 0; }
 .research-submodule.module-hover { --module-hover-bg: #242424; --module-hover-border: #494949; }
 .research-submodule.module-hover::before { inset: -10px -14px; border-radius: 10px; }
-.research-direction-intro { max-width: 780px; font-size: .88rem; line-height: 1.8; color: var(--global-text-color-light); margin: 0 0 26px; }
+.research-direction-intro { font-size: .88rem; line-height: 1.8; color: var(--global-text-color-light); margin: 0 0 26px; }
 .research-label { font-size: .7rem; line-height: 1.5; margin: 0 0 12px; color: var(--global-text-color); }
 .research-work { padding: 0; margin: 0; list-style: none; color: var(--global-text-color-light); font-size: .81rem; line-height: 1.8; }
 .research-work li { position: relative; padding-left: 17px; }
@@ -222,7 +222,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-platforms li { font-size: .7rem; padding: 4px 10px; border: 1px solid #484848; border-radius: 6px; color: var(--global-text-color-light); }
 .research-next { border-top: 1px solid var(--global-divider-color); padding-top: 32px; }
 .research-next h2 { font-size: 1.3rem; margin: 12px 0 14px; }
-.research-next p { max-width: 730px; color: var(--global-text-color-light); font-size: .85rem; line-height: 1.85; margin-bottom: 18px; }
+.research-next p { color: var(--global-text-color-light); font-size: .85rem; line-height: 1.85; margin-bottom: 18px; }
 .research-email { display: inline-block; font-size: .78rem; border-bottom: 1px solid #606060; text-decoration: none; }
 @media (max-width: 650px) {
   .research-direction { padding: 30px 0; }
