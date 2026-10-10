@@ -32,6 +32,10 @@
       title: Uplink Power Control for Massive MIMO-NOMA With Group-Level SIC in Massive URLLC Services
       venue: IEEE Transactions on Wireless Communications
       year: 2025
+    - key: ou2024sum
+      title: Sum Spectral Efficiency Maximization for Uplink Multi-Layer RSMA With Finite SIC
+      venue: IEEE Wireless Communications Letters
+      year: 2024
 - number: "03"
   id: resource-optimization
   title: Low-Complexity Resource Optimization
