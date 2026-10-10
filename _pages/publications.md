@@ -2,12 +2,9 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: First-author and collaborative work in wireless communications.
 nav: true
 nav_order: 2
 ---
-
-{% include bib_search.liquid %}
 
 <div class="publications publication-list">
 <section class="publication-group" aria-labelledby="first-author-heading">
