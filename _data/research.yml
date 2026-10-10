@@ -3,7 +3,7 @@
   title: Finite-Blocklength Communications and URLLC
   description: Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.
   work:
-    - Studying reliability–latency–throughput trade-offs under short-packet constraints.
+    - studying reliability–latency–throughput trade-offs under finite blocklength constraints.
     - Comparing metadata and payload encoding schemes for reliable massive MIMO transmission.
     - Investigating sum-rate loss when infinite-blocklength resource allocations are used in the finite-blocklength regime.
   papers:
