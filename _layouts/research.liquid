@@ -18,11 +18,13 @@ layout: default
     {% for direction in site.data.research %}
     <section class="research-direction" id="{{ direction.id }}" aria-labelledby="{{ direction.id }}-heading">
       <header class="research-direction-heading"><span class="focus-number" aria-hidden="true">{{ direction.number }}</span><h2 id="{{ direction.id }}-heading">{{ direction.title }}</h2></header>
+      <p class="research-direction-intro">{{ direction.description }}</p>
       <div class="research-direction-body">
-        <div class="research-direction-copy">
-          <p class="research-direction-intro">{{ direction.description }}</p>
+        <div class="research-activities">
           <h3 class="research-label">Research activities</h3>
           <ul class="research-work">{% for item in direction.work %}<li>{{ item }}</li>{% endfor %}</ul>
+        </div>
+        <div class="research-references">
           {% if direction.papers %}
           <h3 class="research-label">Related work</h3>
           <ul class="research-papers">
@@ -36,11 +38,6 @@ layout: default
           <ul class="research-platforms">{% for platform in direction.platforms %}<li>{{ platform }}</li>{% endfor %}</ul>
           {% endif %}
         </div>
-        <figure class="research-figure">
-          <span class="research-figure-label">Conceptual overview</span>
-          {% include research_diagram.liquid type=direction.figure %}
-          <figcaption>{{ direction.caption }}</figcaption>
-        </figure>
       </div>
     </section>
     {% endfor %}

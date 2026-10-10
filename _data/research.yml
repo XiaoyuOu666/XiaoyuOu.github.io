@@ -17,8 +17,6 @@
       title: On Mismatch of Sum-Rate Maximization Between Infinite and Finite Blocklength Regimes
       venue: IEEE Transactions on Signal Processing
       status: Under review
-  figure: tradeoffs
-  caption: Short-packet design connects reliability, latency, and throughput.
 - number: "02"
   id: multiuser-mimo
   short_title: Multiuser system design
@@ -38,8 +36,6 @@
       title: Uplink Power Control for Massive MIMO-NOMA With Group-Level SIC in Massive URLLC Services
       venue: IEEE Transactions on Wireless Communications
       year: 2025
-  figure: multiuser
-  caption: Multiuser signals are jointly processed at the receiving array.
 - number: "03"
   id: resource-optimization
   short_title: Resource optimization
@@ -59,8 +55,6 @@
       title: Resource Allocation in MU-MISO Rate-Splitting Multiple Access With SIC Errors for URLLC Services
       venue: IEEE Transactions on Communications
       year: 2023
-  figure: optimization
-  caption: System design is refined through tractable optimization steps.
 - number: "04"
   id: sdr-validation
   short_title: Over-the-air validation
@@ -75,5 +69,3 @@
     - USRP X310
     - Python / UHD
     - MATLAB
-  figure: testbed
-  caption: Algorithms move from software implementation to over-the-air evaluation.
