@@ -100,8 +100,17 @@ h1, h2, h3 { color: var(--personal-heading); }
 .academic-home > .bio::before { top: -14px; }
 .academic-home > .home-bottom::before { bottom: -16px; }
 .academic-home > .home-section:focus-within::before { background-color: #1c1c1c; border-color: #383838; }
+.module-hover { position: relative; isolation: isolate; --module-hover-bg: #1c1c1c; --module-hover-border: #383838; }
+.module-hover::before { content: ''; position: absolute; inset: 14px -20px; z-index: -1; pointer-events: none; border: 1px solid transparent; border-radius: 12px; background: transparent; transition: background-color .2s ease, border-color .2s ease; }
+.module-hover:focus-within::before { background-color: var(--module-hover-bg); border-color: var(--module-hover-border); }
+.research-overview.module-hover::before, .cv-section:first-child.module-hover::before { top: -14px; }
+.research-overview.module-hover::before, .research-next.module-hover::before, .cv-section:last-child.module-hover::before { bottom: -14px; }
+.contact-module.module-hover::before { inset: -12px -20px; }
+.contact-panel.module-hover { --module-hover-bg: #333; --module-hover-border: #606060; border-radius: 12px; }
+.contact-panel.module-hover::before { inset: 0; }
 @media (hover: hover) and (pointer: fine) {
   .academic-home > .home-section:hover::before { background-color: #1c1c1c; border-color: #383838; }
+  .module-hover:hover::before { background-color: var(--module-hover-bg); border-color: var(--module-hover-border); }
 }
 .home-section h1, .home-section h2 { font-size: 1.4rem; font-weight: 400; letter-spacing: -.015em; line-height: 1.35; margin: 0 0 20px; }
 .bio p { font-size: .9rem; color: var(--global-text-color-light); margin: 0 0 14px; }
@@ -172,6 +181,10 @@ h1, h2, h3 { color: var(--personal-heading); }
 .contact-panel { background: var(--personal-soft); padding: 25px; border-radius: 5px; margin: 28px 0; }
 .contact-email { display: block; margin: 10px 0 20px; font-size: 1.35rem; overflow-wrap: anywhere; }
 .contact-panel p { margin: 0; }
+.contact-content .contact-module { margin: 28px 0; }
+.contact-content .contact-module:first-child { margin-top: 0; }
+.contact-content .contact-module:last-child { margin-bottom: 0; }
+.contact-module > p { margin: 0; }
 .research-contact { border-top: 1px solid var(--global-divider-color); padding-top: 22px; margin-top: 35px; }
 .research-page .post-header { margin-bottom: 20px; }
 .research-page .post-description { font-size: .9rem; max-width: 640px; }
@@ -270,6 +283,11 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .academic-home > .home-section::before { inset: 14px -12px; }
   .academic-home > .bio::before { top: -12px; }
   .academic-home > .home-bottom::before { bottom: -12px; }
+  .module-hover::before { inset: 12px -12px; }
+  .research-overview.module-hover::before, .cv-section:first-child.module-hover::before { top: -12px; }
+  .research-overview.module-hover::before, .research-next.module-hover::before, .cv-section:last-child.module-hover::before { bottom: -12px; }
+  .contact-module.module-hover::before { inset: -12px; }
+  .contact-panel.module-hover::before { inset: 0; }
   .cv-section { padding: 30px 0; }
   .cv-timeline-entry { display: block; padding-left: 24px; padding-bottom: 30px; }
   .cv-timeline-entry::before { left: 4px; top: 11px; bottom: -8px; }
@@ -291,7 +309,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 8px; }
   .contact-panel { padding: 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .module-hover::before, .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
   .section-link, .section-link-icon, .section-link-icon svg { transition: none; }
   .section-link:hover .section-link-icon svg, .section-link:focus-visible .section-link-icon svg { transform: none; }

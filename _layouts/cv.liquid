@@ -29,7 +29,7 @@ layout: default
     <article>
       <div class="cv">
         {% for entry in site.data.cv %}
-          <section class="cv-section" id="{{ entry.title }}" aria-labelledby="cv-heading-{{ forloop.index }}">
+          <section class="cv-section module-hover" id="{{ entry.title }}" aria-labelledby="cv-heading-{{ forloop.index }}">
             <h2 class="cv-section-title" id="cv-heading-{{ forloop.index }}">{{ entry.title }}</h2>
             <div>
               {% if entry.type == 'list' %}

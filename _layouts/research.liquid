@@ -6,10 +6,10 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
-  <div class="research-overview">{{ content }}</div>
+  <div class="research-overview module-hover">{{ content }}</div>
   <div class="research-directions">
     {% for direction in site.data.research %}
-    <section class="research-direction" id="{{ direction.id }}" aria-labelledby="{{ direction.id }}-heading">
+    <section class="research-direction module-hover" id="{{ direction.id }}" aria-labelledby="{{ direction.id }}-heading">
       <header class="research-direction-heading"><span class="focus-number" aria-hidden="true">{{ direction.number }}</span><h2 id="{{ direction.id }}-heading">{{ direction.title }}</h2></header>
       <p class="research-direction-intro">{{ direction.description }}</p>
       <div class="research-direction-body">
@@ -35,7 +35,7 @@ layout: default
     </section>
     {% endfor %}
   </div>
-  <section class="research-next" aria-labelledby="ongoing-heading">
+  <section class="research-next module-hover" aria-labelledby="ongoing-heading">
     <span class="eyebrow">LOOKING AHEAD</span>
     <h2 id="ongoing-heading">Ongoing research</h2>
     <p>My ongoing interests include finite-blocklength information theory, fast optimization algorithms for wireless signal processing, and FPGA implementation. I aim to connect these developments with USRP experiments to compare practical performance with theoretical predictions.</p>
