@@ -170,15 +170,19 @@ h1, h2, h3 { color: var(--personal-heading); }
 @media (hover: hover) and (pointer: fine) {
   .publication-list .publication-entry:hover::before { background-color: #242424; border-color: #494949; }
 }
-.publications .publication-entry:hover .doi-button, .publications .publication-entry:focus-within .doi-button { border-color: rgba(255, 255, 255, .4); background: rgba(255, 255, 255, .06); }
 .publications .ieee-citation { color: var(--global-text-color-light); font-size: .9rem; line-height: 1.8; margin: 0; }
 .publications .ieee-citation * { color: inherit; }
 .publications .ieee-citation .title, .publications .ieee-citation .author, .publications .ieee-citation .periodical { display: inline; font-size: inherit; line-height: inherit; color: inherit; font-weight: 400; }
 .publications .ieee-citation .first-author { text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .publications .ieee-citation .self-author,
 .publications .ieee-citation .publication-venue { color: #fff; }
-.publications .ieee-citation .doi-button { display: inline-block; margin-left: 6px; padding: 1px 7px; border: 1px solid rgba(255, 255, 255, .22); border-radius: 6px; background: rgba(255, 255, 255, .025); color: var(--global-text-color-light); font-size: .6875rem; line-height: 1.45; white-space: nowrap; text-decoration: none; vertical-align: baseline; transition: background-color .2s ease, border-color .2s ease; }
-.publications .ieee-citation .doi-button:hover { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .4); text-decoration: none; }
+.publications .ieee-citation .doi-button { display: inline-block; margin-left: 6px; padding: 1px 7px; border: 1px solid #494949; border-radius: 6px; background: #1d1d1d; color: var(--global-text-color-light); font-size: .6875rem; line-height: 1.45; white-space: nowrap; text-decoration: none; vertical-align: baseline; transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
+.publications .publication-entry:focus-within .doi-button { border-color: #777; background: #3a3a3a; color: #fff; }
+.publications .ieee-citation .doi-button:focus-visible { background: #ececec; border-color: #ececec; color: #171717; text-decoration: none; }
+@media (hover: hover) and (pointer: fine) {
+  .publications .publication-entry:hover .doi-button { border-color: #777; background: #3a3a3a; color: #fff; }
+  .publications .ieee-citation .doi-button:hover { background: #ececec; border-color: #ececec; color: #171717; text-decoration: none; }
+}
 .publications ol.bibliography { list-style: none; padding: 0; }
 .publications .publication-status { color: var(--global-text-color-light); font-size: .76rem; margin: 8px 0 0; }
 .publications .publication-group + .publication-group { margin-top: 56px; padding-top: 26px; border-top: 1px solid var(--global-divider-color); }
