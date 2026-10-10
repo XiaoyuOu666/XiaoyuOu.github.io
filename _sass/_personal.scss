@@ -195,7 +195,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-direction-heading { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 22px; }
 .research-direction-heading .focus-number { flex: 0 0 32px; }
 .research-direction-heading h2 { font-size: 1.2rem; line-height: 1.5; letter-spacing: -.01em; margin: 1px 0 0; }
-.research-direction-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.research-direction-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
 .research-activities, .research-references { min-width: 0; }
 .research-direction-intro { max-width: 780px; font-size: .88rem; line-height: 1.8; color: var(--global-text-color-light); margin: 0 0 26px; }
 .research-label { font-size: .7rem; line-height: 1.5; margin: 0 0 12px; color: var(--global-text-color); }
@@ -216,9 +216,6 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-next h2 { font-size: 1.3rem; margin: 12px 0 14px; }
 .research-next p { max-width: 730px; color: var(--global-text-color-light); font-size: .85rem; line-height: 1.85; margin-bottom: 18px; }
 .research-email { display: inline-block; font-size: .78rem; border-bottom: 1px solid #606060; text-decoration: none; }
-@media (max-width: 1100px) {
-  .research-direction-body { grid-template-columns: 1fr; gap: 24px; }
-}
 @media (max-width: 650px) {
   .research-direction { padding: 30px 0; }
   .research-direction-heading { gap: 12px; }
