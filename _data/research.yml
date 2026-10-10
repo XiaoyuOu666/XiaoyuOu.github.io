@@ -4,10 +4,8 @@
   description: Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.
   work:
     - studying reliability–latency–throughput trade-offs under finite blocklength constraints.
-    - Comparing metadata and payload encoding schemes for reliable massive MIMO transmission.
-    - Joint user scheduling, power allocation, and rate control for multicarrier RSMA.
-    - Joint power, receive combining, and blocklength design for reliable massive MIMO.
-    - Investigating sum-rate loss when infinite-blocklength resource allocations are used in the finite-blocklength regime.
+    - Optimizing short-packet encoding and resource allocation in massive MIMO and multicarrier RSMA systems.
+    - Quantifying sum-rate loss when infinite-blocklength resource allocations are used under finite-blocklength constraints.
   papers:
     - key: ou2026reliable
       title: Reliable Uplink Transmission for Low-Throughput Massive MIMO Networks With Finite Blocklength
@@ -26,10 +24,9 @@
   title: Multiuser MIMO and Interference Management
   description: Designing multiuser MIMO transceivers for RSMA and NOMA to manage inter-user interference and improve transmission efficiency.
   work:
-    - Uplink multi-layer RSMA with finite successive interference cancellation (SIC), and MU-MISO RSMA with SIC errors.
-    - Massive MIMO-NOMA with group-level SIC for URLLC services.
-    - Dual-polarized multiuser transmission without SIC over correlated Rician channels.
-    - Low-complexity transceiver and resource allocation algorithms using convex optimization.
+    - Designing RSMA transceivers with finite successive interference cancellation (SIC) and cancellation errors.
+    - Managing uplink interference in massive MIMO-NOMA through group-level SIC.
+    - Developing dual-polarized multiuser transmission without SIC over correlated Rician channels.
   papers:
     - key: ou2026dual
       title: Uplink RSMA with Dual-Polarized Multi-User MIMO over Correlated Rician Channels in Finite Blocklength Regime
