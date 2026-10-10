@@ -105,9 +105,10 @@ h1, h2, h3 { color: var(--personal-heading); }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
 .section-heading > a { font-size: .75rem; text-align: right; }
 .focus-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
-.focus-grid > div { display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 16px; }
+.focus-grid > div { display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 16px; padding: 14px 16px; margin: -14px -16px; border-radius: 10px; transition: background-color .2s ease; }
 .focus-number { display: grid; place-items: center; grid-row: 1 / span 2; width: 32px; height: 32px; box-sizing: border-box; margin-top: 1px; border: 1px solid #606060; border-radius: 9px; background: transparent; color: #ececec; font-size: 14px; line-height: 1; font-variant-numeric: tabular-nums; transition: border-color 180ms ease, background-color 180ms ease; }
 @media (hover: hover) and (pointer: fine) {
+  .focus-grid > div:hover { background: var(--personal-paper-hover); }
   .focus-grid > div:hover .focus-number { border-color: #8a8a8a; background-color: #232323; }
 }
 .focus-grid h3 { font-size: 1rem; font-weight: 400; margin: 0 0 8px; }
@@ -211,6 +212,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .cv-entry-location { margin-top: 0; }
   .personal-content .post-header { margin-bottom: 30px; }
   .publications .publication-entry { padding: 12px 10px; margin: 0 -10px; }
+  .focus-grid > div { padding: 12px 10px; margin: -12px -10px; }
   .section-heading { align-items: flex-start; }
   .section-heading > a { max-width: 110px; }
   .home-bottom { display: block; }
@@ -223,7 +225,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 8px; }
   .contact-panel { padding: 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
