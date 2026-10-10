@@ -7,13 +7,6 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
   </header>
   <div class="research-overview">{{ content }}</div>
-  <nav class="research-pathway" aria-label="Explore the four research directions">
-    <ol>
-      {% for direction in site.data.research %}
-      <li><a href="#{{ direction.id }}"><span class="research-step">{{ direction.number }}</span><span class="research-stage">{{ direction.stage }}</span><span class="research-step-title">{{ direction.short_title }}</span></a></li>
-      {% endfor %}
-    </ol>
-  </nav>
   <div class="research-directions">
     {% for direction in site.data.research %}
     <section class="research-direction" id="{{ direction.id }}" aria-labelledby="{{ direction.id }}-heading">

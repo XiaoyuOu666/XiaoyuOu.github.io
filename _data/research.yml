@@ -1,7 +1,5 @@
 - number: "01"
   id: finite-blocklength
-  short_title: Short-packet communications
-  stage: Understand the limits
   title: Finite-Blocklength Communications and URLLC
   description: Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.
   work:
@@ -19,8 +17,6 @@
       status: Under review
 - number: "02"
   id: multiuser-mimo
-  short_title: Multiuser system design
-  stage: Manage interference
   title: Multiuser MIMO and Interference Management
   description: Designing multiuser MIMO transceivers for RSMA and NOMA to manage inter-user interference and improve transmission efficiency.
   work:
@@ -38,8 +34,6 @@
       year: 2025
 - number: "03"
   id: resource-optimization
-  short_title: Resource optimization
-  stage: Develop algorithms
   title: Low-Complexity Resource Optimization
   description: Developing low-complexity algorithms for precoding/combining, power control/allocation using convex optimization techniques.
   work:
@@ -57,8 +51,6 @@
       year: 2023
 - number: "04"
   id: sdr-validation
-  short_title: Over-the-air validation
-  stage: Evaluate in practice
   title: SDR Prototyping and Over-the-Air Validation
   description: Implementing multiuser transmission and resource allocation algorithms on software-defined radio testbeds to evaluate their performance under practical wireless conditions.
   work:
