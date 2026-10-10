@@ -95,6 +95,14 @@ h1, h2, h3 { color: var(--personal-heading); }
 .personal-main > footer .container { padding: 24px 0; font-size: .68rem; color: var(--global-footer-text-color); border-top: 1px solid var(--global-divider-color); }
 .academic-home > .bio { padding-top: 0; }
 .home-section { padding: 42px 0; border-bottom: 1px solid var(--global-divider-color); margin: 0; }
+.academic-home > .home-section { position: relative; isolation: isolate; }
+.academic-home > .home-section::before { content: ''; position: absolute; inset: 18px -20px; z-index: -1; pointer-events: none; border: 1px solid transparent; border-radius: 12px; background: transparent; transition: background-color .2s ease, border-color .2s ease; }
+.academic-home > .bio::before { top: -14px; }
+.academic-home > .home-bottom::before { bottom: -16px; }
+.academic-home > .home-section:focus-within::before { background-color: #1c1c1c; border-color: #383838; }
+@media (hover: hover) and (pointer: fine) {
+  .academic-home > .home-section:hover::before { background-color: #1c1c1c; border-color: #383838; }
+}
 .home-section h1, .home-section h2 { font-size: 1.4rem; font-weight: 400; letter-spacing: -.015em; line-height: 1.35; margin: 0 0 20px; }
 .bio p { font-size: .9rem; color: var(--global-text-color-light); margin: 0 0 14px; }
 .bio p:last-child { margin-bottom: 0; }
@@ -263,6 +271,9 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 10px; font-size: .78rem; }
   .personal-main { padding: 30px 28px 0; }
   .home-section { padding: 34px 0; }
+  .academic-home > .home-section::before { inset: 14px -12px; }
+  .academic-home > .bio::before { top: -12px; }
+  .academic-home > .home-bottom::before { bottom: -12px; }
   .cv-section { padding: 30px 0; }
   .cv-timeline-entry { display: block; padding-left: 24px; padding-bottom: 30px; }
   .cv-timeline-entry::before { left: 4px; top: 11px; bottom: -8px; }
@@ -284,7 +295,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 8px; }
   .contact-panel { padding: 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
