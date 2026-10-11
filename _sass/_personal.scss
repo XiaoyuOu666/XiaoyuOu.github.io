@@ -51,8 +51,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .intro-role { font-size: .82rem; margin-bottom: 15px; }
 .intro-affiliation, .intro-affiliation span { font-size: .78rem; color: var(--global-text-color-light); }
 .intro-affiliation span { display: block; }
-.intro-affiliation .sidebar-university, .intro-affiliation .sidebar-group { color: #fff; }
-.intro-affiliation .sidebar-group { display: block; margin: 6px 0; }
+.intro-affiliation .sidebar-university { color: #fff; }
 .intro-links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin: 22px 0 32px; font-size: .75rem; }
 .intro-links a { display: inline-flex; align-items: center; gap: 10px; padding: 2px 0; text-decoration: none; }
 .intro-links a span { border-bottom: 1px solid var(--global-divider-color); }
