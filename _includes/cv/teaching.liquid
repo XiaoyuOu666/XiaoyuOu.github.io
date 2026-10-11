@@ -1,0 +1,10 @@
+{% for experience in entry.contents %}
+  <div class="cv-teaching module-hover">
+    <div class="cv-teaching-heading">
+      <h3 class="cv-entry-title">{{ experience.title }}</h3>
+      <span class="cv-entry-date">{{ experience.year }}</span>
+    </div>
+    <p class="cv-entry-institution">{{ experience.institution }}</p>
+    {% for detail in experience.description %}<p class="cv-teaching-description">{{ detail }}</p>{% endfor %}
+  </div>
+{% endfor %}

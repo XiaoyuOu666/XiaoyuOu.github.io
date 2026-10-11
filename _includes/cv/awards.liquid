@@ -1,0 +1,11 @@
+<ul class="cv-awards">
+  {% for award in entry.contents %}
+    <li class="cv-award module-hover">
+      <span class="cv-award-year">{{ award.year }}</span>
+      <div>
+        <h3 class="cv-entry-title">{{ award.title }}</h3>
+        {% if award.institution %}<p class="cv-entry-institution">{{ award.institution }}</p>{% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

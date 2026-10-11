@@ -1,6 +1,7 @@
 <ul class="cv-timeline">
   {% for content in entry.contents %}
     <li class="cv-timeline-entry">
+      <span class="cv-timeline-marker" aria-hidden="true"></span>
       <div class="cv-entry-date">{{ content.year }}{% if content.location %}<span class="cv-entry-location">{{ content.location }}</span>{% endif %}</div>
       <div class="cv-entry-content">
         {% if content.title %}<h3 class="cv-entry-title">{{ content.title }}</h3>{% endif %}
@@ -10,11 +11,19 @@
         {% assign detail_keys = 'description,items' | split: ',' %}
         {% for detail_key in detail_keys %}
           {% if content[detail_key] %}
-            <ul class="cv-entry-details">
+            <div class="cv-education-details">
               {% for item in content[detail_key] %}
-                <li>{% if item.contents %}{{ item.title }}<ul>{% for subitem in item.contents %}<li>{{ subitem }}</li>{% endfor %}</ul>{% else %}{{ item }}{% endif %}</li>
+                {% assign parts = item | split: ': ' %}
+                {% if parts.size > 1 %}
+                  <div class="cv-education-detail">
+                    <span class="cv-detail-label">{{ parts | first }}</span>
+                    <p>{{ item | remove_first: parts.first | remove_first: ': ' }}</p>
+                  </div>
+                {% else %}
+                  <p class="cv-funding-note">{{ item }}</p>
+                {% endif %}
               {% endfor %}
-            </ul>
+            </div>
           {% endif %}
         {% endfor %}
         {% if content.linkitems %}

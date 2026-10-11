@@ -1,0 +1,6 @@
+<p class="cv-service-label">Journal reviewer</p>
+<ul class="cv-service-list">
+  {% for journal in entry.contents %}
+    <li>{{ journal | remove_first: 'Journal reviewer: ' | split: '.' | first }}</li>
+  {% endfor %}
+</ul>

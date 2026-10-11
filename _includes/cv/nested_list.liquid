@@ -1,15 +1,16 @@
 <ul class="cv-topic-list">
   {% for content in entry.contents %}
-    <li class="cv-topic">
-      <h3 class="cv-entry-title">{{ content.title }}</h3>
+    <li class="cv-topic module-hover">
+      <div class="cv-topic-heading">
+        <span class="focus-number" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3 class="cv-entry-title">{{ content.title }}</h3>
+      </div>
       {% if content.items %}
-        <ul class="cv-entry-details">
+        <div class="cv-topic-details">
           {% for subitem in content.items %}
-            <li>
-              <span class="subitem">{{ subitem }}</span>
-            </li>
+            <p>{{ subitem }}</p>
           {% endfor %}
-        </ul>
+        </div>
       {% endif %}
     </li>
   {% endfor %}
