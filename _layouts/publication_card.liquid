@@ -1,8 +1,12 @@
 ---
 ---
 {% assign publication_url = '/publications/#' | append: entry.key %}
-<article id="{{ entry.key }}" class="publication-entry publication-card" aria-labelledby="{{ entry.key }}-title" data-authorship="{{ entry.authorship }}" data-year="{{ entry.year }}">
+{% assign journal = entry.journal | replace: 'IEEE Transactions on Communications', 'IEEE Trans. Commun.' | replace: 'IEEE Transactions on Wireless Communications', 'IEEE Trans. Wireless Commun.' | replace: 'IEEE Transactions on Vehicular Technology', 'IEEE Trans. Veh. Technol.' | replace: 'IEEE Wireless Communications Letters', 'IEEE Wireless Commun. Lett.' | replace: 'IEEE Communications Letters', 'IEEE Commun. Lett.' | replace: 'IEEE Systems Journal', 'IEEE Syst. J.' %}
+{% assign editorial = false %}
+{% if page.selected_papers and entry.type == 'article' %}{% assign editorial = true %}{% endif %}
+<article id="{{ entry.key }}" class="publication-entry publication-card{% if editorial %} publication-card-editorial{% endif %}" aria-labelledby="{{ entry.key }}-title" data-authorship="{{ entry.authorship }}" data-year="{{ entry.year }}">
   <div class="ieee-citation card-citation">
+    {% if editorial %}<div class="publication-card-masthead"><p class="publication-card-journal"><em class="publication-venue">{{ entry.journal }}</em></p><span class="publication-card-year">{{ entry.year }}</span></div>{% endif %}
     <h3 class="title publication-card-title" id="{{ entry.key }}-title">{% if page.url == '/publications/' %}{{ entry.title }}{% else %}<a href="{{ publication_url | relative_url }}">{{ entry.title }}</a>{% endif %}</h3>
     <p class="publication-card-authors"><span class="author">
       {%- for author in entry.author_array -%}
@@ -15,8 +19,11 @@
     <div class="publication-card-footer">
       <p class="periodical publication-card-details">
         {%- if entry.type == 'article' -%}
-        {%- assign journal = entry.journal | replace: 'IEEE Transactions on Communications', 'IEEE Trans. Commun.' | replace: 'IEEE Transactions on Wireless Communications', 'IEEE Trans. Wireless Commun.' | replace: 'IEEE Transactions on Vehicular Technology', 'IEEE Trans. Veh. Technol.' | replace: 'IEEE Wireless Communications Letters', 'IEEE Wireless Commun. Lett.' | replace: 'IEEE Communications Letters', 'IEEE Commun. Lett.' | replace: 'IEEE Systems Journal', 'IEEE Syst. J.' -%}
+        {%- if editorial -%}
+        {% if entry.volume %}vol. {{ entry.volume }}{% endif %}{% if entry.number %}, no. {{ entry.number }}{% endif %}{% if entry.pages %}, pp. {{ entry.pages | replace: '--', '–' }}{% endif %}{% if entry.note and entry.note != 'Early access' %}, {{ entry.note }}{% elsif entry.note == 'Early access' %}, early access{% endif %}{% unless entry.note contains '.' %}.{% endunless %}
+        {%- else -%}
         <em class="publication-venue">{{ journal }}</em>{% if entry.volume %}, vol. {{ entry.volume }}{% endif %}{% if entry.number %}, no. {{ entry.number }}{% endif %}{% if entry.pages %}, pp. {{ entry.pages | replace: '--', '–' }}{% endif %}, {% if entry.note and entry.note != 'Early access' %}{{ entry.note }} {% endif %}{{ entry.year }}{% if entry.note == 'Early access' %}, early access{% endif %}.
+        {%- endif -%}
         {%- elsif entry.type == 'inproceedings' -%}
         {%- assign conference = entry.booktitle | replace: 'IEEE 36th International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)', 'Proc. IEEE 36th Int. Symp. Pers., Indoor Mobile Radio Commun. (PIMRC)' -%}
         in <em>{{ conference }}</em>{% if entry.location %}, {{ entry.location }}{% endif %}, {% if entry.month %}{{ entry.month | capitalize | remove: '.' }}. {% endif %}{{ entry.year }}{% if entry.pages %}, pp. {{ entry.pages | replace: '--', '–' }}{% endif %}.
