@@ -1,37 +1,56 @@
-# Xiaoyu Ou · Academic homepage
+# Xiaoyu Ou — Academic Website
 
-Personal academic website based on the [existing al-folio template](https://github.com/XiaoyuOu666/XiaoyuOu.github.io) and the supplied September 2026 CV.
+Personal academic website for Xiaoyu Ou, a PhD candidate at the University of Bristol.
 
-The website includes an introduction, research profile, 12 journal articles, one conference paper, one manuscript under review, an online CV, and contact details. It supports mobile layouts, publication filtering, BibTeX, and dark mode.
+[View the website](https://xiaoyuou666.github.io/XiaoyuOu.github.io/)
 
-See [README-ZH.md](README-ZH.md) for Chinese setup and publishing instructions.
+## Editing content
 
-## GitHub Pages
+| Content | File |
+| --- | --- |
+| About me | `_pages/about.md` |
+| Research directions and related work | `_data/research.yml` |
+| Publications and selected papers | `_bibliography/papers.bib` |
+| Education, research experience, teaching, service and skills | `_data/cv.yml` |
+| Contact page | `_pages/contact.md` |
+| CV page title and description | `_pages/cv.md` |
+| Sidebar | `_includes/header.liquid` |
+| Email and online profile URLs | `_data/socials.yml` |
+| Main design and responsive styles | `_sass/_personal.scss` |
+| Photo | `assets/img/Xiaoyu-Ou.jpg` |
+| Downloadable CV | `assets/pdf/CV-Xiaoyu-Ou.pdf` |
+| Site URL, metadata and footer | `_config.yml` |
 
-The configured project URL is https://xiaoyuou666.github.io/XiaoyuOu.github.io/.
+The home page reads research directions, selected publications, teaching and service from the same data used by the other pages. To select a paper for the home page, set `selected = {true}` in its BibTeX entry. Use DOI links for publications.
 
-Push the source to the repository's main branch and select **GitHub Actions** under **Settings → Pages**. The workflow builds the Jekyll website and deploys it using the official GitHub Pages actions. Public hosting has not been activated by the local build.
+## Local preview
 
-## Content
+The site uses Jekyll, Ruby 3.3.5 and Bundler. Install the locked dependencies:
 
-- Introduction: `_pages/about.md`
-- Research: `_pages/research.md`
-- Publications: `_bibliography/papers.bib`
-- Online CV: `_data/cv.yml`
-- Links: `_data/socials.yml`
-- PDF CV: `assets/pdf/CV-Xiaoyu-Ou.pdf`
-- Profile photo: `assets/img/Xiaoyu-Ou.jpg`
-- Personal styles: `_sass/_personal.scss`
-
-## Preview
-
-On the current computer, run `preview.ps1`. With a standard Ruby installation:
-
-```text
+```sh
 bundle install
-bundle exec jekyll serve --baseurl ""
 ```
+
+On Windows, run:
+
+```powershell
+.\preview.ps1
+```
+
+Open `http://127.0.0.1:4173/`. The preview script also detects the Ruby runtime already installed next to this workspace.
+
+For a production build:
+
+```sh
+bundle exec jekyll build
+```
+
+Generated pages are written to `_site/`, which is ignored by Git.
+
+## Publishing
+
+Push changes to `main`. `.github/workflows/deploy.yml` builds the website and publishes it to GitHub Pages. The tracked `Gemfile.lock` keeps the build dependencies reproducible.
 
 ## Credits
 
-[Jekyll](https://jekyllrb.com/) and [al-folio](https://github.com/alshedivat/al-folio). The original MIT license is retained.
+Built from [al-folio](https://github.com/alshedivat/al-folio), with a custom dark layout. The original MIT license is retained in `LICENSE`. Icon resources retain their attribution and license headers.

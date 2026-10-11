@@ -8,7 +8,7 @@ if (Test-Path -LiteralPath $taskRuby) {
     $env:MSYS2_PATH = Join-Path $taskTools 'msys64'
 }
 if (-not (Get-Command bundle -ErrorAction SilentlyContinue)) {
-    throw 'Ruby/Bundler is required. See README-ZH.md for setup instructions.'
+    throw 'Ruby/Bundler is required. See README.md for setup instructions.'
 }
 Write-Host "Local preview: http://127.0.0.1:$Port/"
 # Invoke Jekyll inside Ruby to support workspace paths containing spaces.
