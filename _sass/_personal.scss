@@ -51,6 +51,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .intro-role { font-size: .82rem; margin-bottom: 15px; }
 .intro-affiliation, .intro-affiliation span { font-size: .78rem; color: var(--global-text-color-light); }
 .intro-affiliation span { display: block; }
+.intro-affiliation .sidebar-group { display: block; margin: 6px 0; }
 .intro-links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin: 22px 0 32px; font-size: .75rem; }
 .intro-links a { display: inline-flex; align-items: center; gap: 10px; padding: 2px 0; text-decoration: none; }
 .intro-links a span { border-bottom: 1px solid var(--global-divider-color); }
@@ -326,8 +327,6 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .profile-photo { width: 144px; height: 144px; margin-bottom: 26px; }
   .sidebar-name { font-size: 2.1rem; margin-bottom: 14px; }
   .intro-role { max-width: 350px; margin-bottom: 10px; }
-  .intro-affiliation span { display: inline; }
-  .intro-affiliation span::before { content: ' · '; }
   .intro-links { margin: 16px 0 22px; }
   #navbar .navbar-nav { flex-direction: row; flex-wrap: wrap; gap: 4px; }
   #navbar .nav-link { padding: 9px 10px; font-size: .78rem; }
