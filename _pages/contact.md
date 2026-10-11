@@ -33,14 +33,4 @@ description: Research collaborations and academic enquiries.
   </ul>
 </section>
 
-<section class="contact-section module-hover" aria-labelledby="contact-cv-heading">
-  <div class="contact-cv-heading">
-    <h2 id="contact-cv-heading">Curriculum vitae</h2>
-    <a class="section-link cv-download" href="{{ '/assets/pdf/CV-Xiaoyu-Ou.pdf' | relative_url }}" download="Xiaoyu-Ou-CV.pdf" aria-label="Download Xiaoyu Ou's CV (PDF)">
-      <span class="section-link-label">Download CV</span>
-      <span class="section-link-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" focusable="false"><path d="M8 2.5v8M4.75 7.25 8 10.5l3.25-3.25M3 11v2h10v-2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-    </a>
-  </div>
-  <p>A full overview of my education, research experience, and publications.</p>
-</section>
 </div>

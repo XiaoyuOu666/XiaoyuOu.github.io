@@ -1,6 +1,6 @@
 <header class="post-header">
   <div class="cv-page-heading">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.display_title | default: page.title }}</h1>
     {% if page.cv_pdf %}
     <a class="section-link cv-download"
       {% if page.cv_pdf contains '://' %}
