@@ -179,6 +179,10 @@ h1, h2, h3 { color: var(--personal-heading); }
 .personal-content .post-description { font-size: .9rem; color: var(--global-text-color-light); }
 .personal-content .post-header { margin-bottom: 38px; }
 .personal-content .post-description { margin-bottom: 0; }
+.cv-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 14px; }
+.cv-page-heading .post-title { margin: 0; }
+.cv-download:focus-visible .section-link-icon svg { transform: translateY(2px); }
+@media (hover: hover) and (pointer: fine) { .cv-download:hover .section-link-icon svg { transform: translateY(2px); } }
 .personal-content .post > article { font-size: .9rem; line-height: 1.8; }
 .personal-content .post > article > h2,
 .personal-content .publication-group > h2:not(.bibliography),
