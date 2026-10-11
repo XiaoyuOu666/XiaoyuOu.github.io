@@ -33,21 +33,18 @@
 - title: Research Experience
   type: nested_list
   contents:
-    - title: Multiuser transmission and interference management
+    - title: Finite-Blocklength Communications and URLLC
       items:
-        - Uplink RSMA with finite SIC, massive MIMO-NOMA with group-level SIC, and dual-polarized transmission without SIC.
-        - Power-control and receiver-design algorithms for multiuser wireless systems.
-    - title: Resource allocation for short-packet communications
+        - Studying reliability–latency–throughput trade-offs and optimizing short-packet encoding and resource allocation in massive MIMO and RSMA systems using convex optimization.
+        - Quantifying sum-rate loss when infinite-blocklength resource allocations are applied to finite-blocklength transmission.
+    - title: Multiuser MIMO and Interference Management
       items:
-        - Joint user scheduling, power allocation, and rate control for multicarrier RSMA.
-        - Metadata and payload encoding in massive MIMO, with power, receive combining, and blocklength optimization.
-    - title: Infinite-to-finite blocklength mismatch
+        - Designing RSMA transceivers with finite SIC and cancellation errors, and managing uplink interference in massive MIMO-NOMA through group-level SIC.
+        - Developing SIC-free dual-polarized multiuser transmission over correlated Rician channels.
+    - title: SDR Prototyping and Over-the-Air Validation
       items:
-        - Sum-rate loss when allocations designed for infinite blocklength are applied to finite-blocklength transmission.
-    - title: Practical implementation
-      items:
-        - USRP X310 testbed development using Python/UHD and MATLAB.
-        - Device synchronization, channel estimation, multiuser precoding, and over-the-air testing.
+        - Implementing multiuser transmission and resource allocation algorithms on USRP X310 testbeds using Python/UHD and MATLAB.
+        - Developing device synchronization, channel estimation, and multiuser precoding, with over-the-air performance evaluation.
 
 - title: Teaching Experience
   type: time_table
