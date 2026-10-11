@@ -13,7 +13,7 @@
         {%- unless forloop.first -%}{% if forloop.last %}{% if forloop.length > 2 %}, {% else %} {% endif %}and {% else %}, {% endif %}{%- endunless -%}
         {%- assign name_parts = author.first | split: ' ' -%}
         {%- capture initials -%}{%- for part in name_parts -%}{{ part | slice: 0 }}.{% unless forloop.last %}{{ ' ' }}{% endunless %}{%- endfor -%}{%- endcapture -%}
-        <span class="author-name{% if forloop.first and entry.type == 'article' %} first-author{% endif %}{% if author.last == 'Ou' and author.first == 'Xiaoyu' %} self-author{% endif %}">{{ initials }} {{ author.last }}</span>
+        <span class="author-name{% if forloop.first and entry.type == 'article' %} first-author{% endif %}{% if author.last == 'Ou' and author.first == 'Xiaoyu' %} self-author{% endif %}">{% if editorial %}{{ author.first }}{% else %}{{ initials }}{% endif %} {{ author.last }}</span>
       {%- endfor -%}
     </span></p>
     <div class="publication-card-footer">
