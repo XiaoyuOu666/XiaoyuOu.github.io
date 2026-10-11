@@ -80,8 +80,7 @@
 - title: Technical Skills
   type: list
   contents:
-    - MATLAB; Python/UHD; USRP X310.
-    - Convex optimization; theoretical analysis and modeling.
+    - "Tools and methods: MATLAB; Python; convex optimization; theoretical analysis and modeling."
 
 - title: Future Research Interests
   type: list
