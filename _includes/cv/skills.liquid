@@ -1,0 +1,8 @@
+<ul class="cv-skill-grid">
+  {% for skill in entry.contents %}
+  <li class="cv-skill module-hover">
+    <h3 class="cv-skill-title">{{ skill.title }}</h3>
+    <p>{{ skill.description }}</p>
+  </li>
+  {% endfor %}
+</ul>

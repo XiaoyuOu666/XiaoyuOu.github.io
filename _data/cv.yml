@@ -78,9 +78,16 @@
     - "Journal reviewer: IEEE Wireless Communications Letters."
 
 - title: Technical Skills
-  type: list
+  type: skill_groups
   contents:
-    - "Tools and methods: MATLAB; Python; convex optimization; theoretical analysis and modeling."
+    - title: Programming
+      description: MATLAB/Python for numerical simulation; Python for algorithm implementation and SDR testbed control.
+    - title: Wireless Signal Processing
+      description: Multiuser MIMO transceiver design, RSMA/NOMA interference management, channel estimation, and finite-blocklength performance analysis.
+    - title: Mathematical Modeling and Optimization
+      description: Communication-system modeling and optimization problem formulation; convex optimization and low-complexity algorithm design for radio resource management.
+    - title: SDR Experimentation
+      description: USRP X310 testbed development using Python/UHD; device synchronization and over-the-air testing.
 
 - title: Future Research Interests
   type: list

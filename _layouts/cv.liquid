@@ -17,6 +17,8 @@ layout: default
                 {% include cv/map.liquid %}
               {% elsif entry.type == 'nested_list' %}
                 {% include cv/nested_list.liquid %}
+              {% elsif entry.type == 'skill_groups' %}
+                {% include cv/skills.liquid %}
               {% elsif entry.type == 'time_table' %}
                 {% include cv/time_table.liquid %}
               {% elsif entry.type == 'list_groups' %}
