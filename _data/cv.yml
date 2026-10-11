@@ -88,15 +88,3 @@
       description: Communication-system modeling and optimization problem formulation; convex optimization and low-complexity algorithm design for radio resource management.
     - title: SDR Experimentation
       description: USRP X310 testbed development using Python/UHD; device synchronization and over-the-air testing.
-
-- title: Future Research Interests
-  type: list
-  contents:
-    - Finite-blocklength information theory and its applications.
-    - Fast optimization algorithms for wireless signal processing.
-    - FPGA implementation of signal-processing and optimization algorithms, validated through USRP experiments.
-
-- title: Publications
-  type: list
-  contents:
-    - '<a href="../publications/">View all 12 journal articles, 1 conference paper, and 1 manuscript under review.</a>'

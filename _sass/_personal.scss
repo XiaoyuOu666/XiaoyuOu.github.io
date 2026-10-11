@@ -334,8 +334,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .cv-profile-meta a { color: inherit; text-decoration-color: #606060; text-underline-offset: 4px; }
 .cv-section { padding: 36px 0; border-bottom: 1px solid var(--global-divider-color); scroll-margin-top: 24px; }
 .cv-section:last-child { padding-bottom: 0; border-bottom: 0; }
-.cv-section-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; }
-.cv-section-index { font-size: .78rem; line-height: 1; color: #929292; font-variant-numeric: tabular-nums; }
+.cv-section-heading { margin-bottom: 26px; }
 .cv-section-title { margin: 0; letter-spacing: -.015em; }
 .cv-section .list-group-item { padding: 12px 0; background: transparent; border-color: var(--global-divider-color); color: var(--global-text-color-light); }
 .cv-section .list-group-item:first-child { padding-top: 0; }
@@ -440,7 +439,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .cv-teaching-heading { flex-direction: column; gap: 0; margin-bottom: 8px; }
   .cv-award { grid-template-columns: 44px minmax(0, 1fr); gap: 14px; }
   .cv-award.module-hover::before { inset: 4px -8px; }
-  .cv-section-heading { gap: 12px; margin-bottom: 22px; }
+  .cv-section-heading { margin-bottom: 22px; }
   .cv-entry-date { padding: 0; margin-bottom: 10px; }
   .cv-entry-location { margin-top: 0; }
   .personal-content .post-header { margin-bottom: 30px; }

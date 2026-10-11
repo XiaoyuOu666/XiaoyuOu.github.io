@@ -9,13 +9,10 @@ layout: default
       <div class="cv">
         {% assign profile = site.data.cv | where: 'title', 'Profile' | first %}
         {% if profile %}{% include cv/profile.liquid %}{% endif %}
-        {% assign section_number = 0 %}
         {% for entry in site.data.cv %}
           {% if entry.title == 'Profile' %}{% continue %}{% endif %}
-          {% assign section_number = section_number | plus: 1 %}
           <section class="cv-section module-hover" id="{{ entry.title }}" aria-labelledby="cv-heading-{{ forloop.index }}">
             <div class="cv-section-heading">
-              <span class="cv-section-index" aria-hidden="true">{% if section_number < 10 %}0{% endif %}{{ section_number }}</span>
               <h2 class="cv-section-title" id="cv-heading-{{ forloop.index }}">{{ entry.title }}</h2>
             </div>
             <div>
