@@ -17,5 +17,35 @@ layout: default
     {% include selected_papers.liquid %}
   </section>
   {% endif %}
-  <section class="home-section home-bottom"><div><span class="eyebrow">BEYOND RESEARCH</span><h2>Teaching &amp; academic service</h2><p>Teaching Assistant at Bristol in 2026. Reviewer for IEEE journals in communications and wireless systems.</p></div>{% include section_link.liquid url='/cv/' label='View my CV' %}</section>
+  <section class="home-section home-bottom" aria-labelledby="beyond-heading">
+    <div class="section-heading"><h2 id="beyond-heading">Beyond research</h2>{% include section_link.liquid url='/cv/' label='View my CV' %}</div>
+    {% assign teaching = site.data.cv | where: 'title', 'Teaching Experience' | first %}
+    {% assign service = site.data.cv | where: 'title', 'Academic Service' | first %}
+    <div class="beyond-grid">
+      <section class="beyond-module module-hover" aria-labelledby="beyond-teaching-heading">
+        <h3 id="beyond-teaching-heading">Teaching</h3>
+        {% for position in teaching.contents %}
+        <p class="beyond-role">{{ position.title }}<br>{{ position.institution }}</p>
+        <p class="beyond-date">{{ position.year }}</p>
+        {% for description in position.description %}<p>{{ description }}</p>{% endfor %}
+        {% endfor %}
+      </section>
+      <section class="beyond-module module-hover" aria-labelledby="beyond-service-heading">
+        <h3 id="beyond-service-heading">Academic service</h3>
+        <p>Journal reviewer for:</p>
+        <ul class="beyond-service-list">
+          {% for journal in service.contents %}
+          {% assign journal_name = journal | remove: 'Journal reviewer: ' | remove: '.' %}
+          {% assign short_name = journal_name | replace: 'IEEE Transactions on Communications', 'IEEE Trans. Commun.' | replace: 'IEEE Transactions on Wireless Communications', 'IEEE Trans. Wireless Commun.' | replace: 'IEEE Transactions on Vehicular Technology', 'IEEE Trans. Veh. Technol.' | replace: 'IEEE Communications Letters', 'IEEE Commun. Lett.' | replace: 'IEEE Wireless Communications Letters', 'IEEE Wireless Commun. Lett.' %}
+          <li><abbr title="{{ journal_name }}">{{ short_name }}</abbr></li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="beyond-module module-hover" aria-labelledby="beyond-interests-heading">
+        <h3 id="beyond-interests-heading">Outside the lab</h3>
+        <p>Outside the lab, I enjoy:</p>
+        <ul class="beyond-interest-list"><li>Rock climbing</li><li>Hiking</li><li>Swimming</li></ul>
+      </section>
+    </div>
+  </section>
 </div>
