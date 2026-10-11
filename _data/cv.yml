@@ -1,15 +1,3 @@
-- title: Profile
-  type: map
-  contents:
-    - name: Name
-      value: Xiaoyu Ou
-    - name: Position
-      value: PhD Candidate in Electrical and Electronic Engineering
-    - name: Institution
-      value: University of Bristol, United Kingdom
-    - name: Email
-      value: '<a href="mailto:xiaoyu.ou@bristol.ac.uk">xiaoyu.ou@bristol.ac.uk</a>'
-
 - title: Education
   type: time_table
   contents:

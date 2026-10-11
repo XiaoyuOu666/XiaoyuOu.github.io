@@ -326,13 +326,8 @@ h1, h2, h3 { color: var(--personal-heading); }
 .cv { font-size: .9rem; line-height: 1.8; }
 .cv .card { box-shadow: none; border: 1px solid var(--global-divider-color); border-radius: 5px; }
 /* CV: editorial sections, a quiet timeline, and individually highlighted entries. */
-.cv-profile { padding: 0 0 30px; border-bottom: 1px solid var(--global-divider-color); }
-.cv-profile.module-hover::before { inset: -14px -20px 14px; }
-.cv-profile-name { font-size: 1.15rem; line-height: 1.4; margin: 0 0 8px; }
-.cv-profile-role { margin: 0 0 12px; color: var(--global-text-color-light); }
-.cv-profile-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--global-text-color-light); font-size: .82rem; }
-.cv-profile-meta a { color: inherit; text-decoration-color: #606060; text-underline-offset: 4px; }
 .cv-section { padding: 36px 0; border-bottom: 1px solid var(--global-divider-color); scroll-margin-top: 24px; }
+.cv-section:first-child { padding-top: 0; }
 .cv-section:last-child { padding-bottom: 0; border-bottom: 0; }
 .cv-section-heading { margin-bottom: 26px; }
 .cv-section-title { margin: 0; letter-spacing: -.015em; }
@@ -433,7 +428,6 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .cv-timeline-entry { display: block; padding: 18px 0 26px 24px; }
   .cv-timeline-entry::before { left: 4px; top: 28px; bottom: -28px; }
   .cv-timeline-marker { left: 0; top: 25px; }
-  .cv-profile.module-hover::before { inset: -12px -12px 14px; }
   .cv-topic, .cv-teaching { padding: 20px; }
   .cv-topic.module-hover::before, .cv-teaching.module-hover::before { inset: -1px; }
   .cv-teaching-heading { flex-direction: column; gap: 0; margin-bottom: 8px; }
