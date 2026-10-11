@@ -1,9 +1,17 @@
 ---
 ---
 {% assign publication_url = '/publications/#' | append: entry.key %}
-<article id="{{ entry.key }}" class="publication-entry publication-card" aria-labelledby="{{ entry.key }}-title" data-authorship="{{ entry.authorship }}" data-year="{{ entry.year }}">
+{% assign preview = site.data.publication_previews[entry.key] %}
+<article id="{{ entry.key }}" class="publication-entry publication-card{% if page.selected_papers and preview %} publication-card-illustrated{% endif %}" aria-labelledby="{{ entry.key }}-title" data-authorship="{{ entry.authorship }}" data-year="{{ entry.year }}">
+  {% if page.selected_papers and preview %}
+  <button type="button" class="publication-preview-toggle" aria-label="Enlarge figure: {{ entry.title | escape }}" aria-haspopup="dialog" aria-controls="publication-figure-dialog" data-figure-caption="{{ preview.caption | escape }}">
+    <span class="publication-preview-image"><img src="{{ preview.image | relative_url }}" alt="{{ preview.alt | escape }}" width="{{ preview.width }}" height="{{ preview.height }}" loading="lazy" decoding="async"></span>
+    <span class="publication-preview-label"><span>{{ preview.label }}</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg></span>
+  </button>
+  {% endif %}
   <div class="ieee-citation card-citation">
     <h3 class="title publication-card-title" id="{{ entry.key }}-title">{% if page.url == '/publications/' %}{{ entry.title }}{% else %}<a href="{{ publication_url | relative_url }}">{{ entry.title }}</a>{% endif %}</h3>
+    {% if page.selected_papers and preview %}<p class="publication-card-summary">{{ preview.summary }}</p>{% endif %}
     <p class="publication-card-authors"><span class="author">
       {%- for author in entry.author_array -%}
         {%- unless forloop.first -%}{% if forloop.last %}{% if forloop.length > 2 %}, {% else %} {% endif %}and {% else %}, {% endif %}{%- endunless -%}
