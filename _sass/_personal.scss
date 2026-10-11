@@ -134,7 +134,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 }
 .focus-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
 .focus-grid > div { display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 16px; padding: 14px 16px; margin: -14px -16px; border-radius: 10px; transition: background-color .2s ease; }
-.focus-number { display: grid; place-items: center; grid-row: 1 / span 2; width: 32px; height: 32px; box-sizing: border-box; margin-top: 1px; border: 1px solid #606060; border-radius: 9px; background: transparent; color: #ececec; font-size: 14px; line-height: 1; font-variant-numeric: tabular-nums; transition: border-color 180ms ease, background-color 180ms ease; }
+.focus-number { display: grid; place-items: center; grid-row: 1 / span 2; width: 32px; height: 32px; box-sizing: border-box; margin-top: 1px; border: 1px solid #606060; border-radius: 9px; background: transparent; color: #ececec; font-size: 14px; line-height: 1; font-variant-numeric: tabular-nums; transition: border-color .2s ease, background-color .2s ease, color .2s ease; }
 @media (hover: hover) and (pointer: fine) {
   .focus-grid > div:hover { background: var(--personal-paper-hover); }
   .focus-grid > div:hover .focus-number { border-color: #8a8a8a; background-color: #232323; }
@@ -225,7 +225,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-paper-meta { display: block; margin-top: 4px; font-size: .82rem; line-height: 1.7; color: var(--global-text-color-light); }
 .research-paper-status { color: #d3d3d3; }
 .research-platforms { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
-.research-platforms li { font-size: .82rem; padding: 4px 10px; border: 1px solid #484848; border-radius: 6px; color: var(--global-text-color-light); }
+.research-platforms li { font-size: .82rem; padding: 4px 10px; border: 1px solid #484848; border-radius: 6px; background: transparent; color: var(--global-text-color-light); transition: background-color .2s ease, border-color .2s ease, color .2s ease; }
 .research-next { border-top: 1px solid var(--global-divider-color); padding-top: 32px; }
 .research-next h2 { font-size: 1.4rem; line-height: 1.35; margin: 0 0 14px; }
 .research-next p { color: var(--global-text-color-light); font-size: .9rem; line-height: 1.85; margin: 0; }
@@ -238,6 +238,9 @@ h1, h2, h3 { color: var(--personal-heading); }
 }
 @media (hover: hover) and (pointer: fine) {
   .research-direction:hover .focus-number { border-color: #8a8a8a; background: #232323; }
+  .focus-grid > div .focus-number:hover,
+  .research-direction .focus-number:hover,
+  .research-platforms li:hover { border-color: #ececec; background: #ececec; color: #171717; }
 }
 @media (prefers-reduced-motion: reduce) {
   .research-papers a { transition: none; }
@@ -323,7 +326,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   #navbar .nav-link { padding: 9px 8px; }
   .contact-panel { padding: 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .module-hover::before, .academic-home > .home-section::before, .focus-grid > div, .focus-number, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publication-list .publication-entry::before, .publications .ieee-citation .doi-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .module-hover::before, .academic-home > .home-section::before, .focus-grid > div, .focus-number, .research-platforms li, #navbar .nav-link, .intro-links a i, .publications .publication-entry, .publication-list .publication-entry::before, .publications .ieee-citation .doi-button { transition: none; } }
 @media (prefers-reduced-motion: reduce) {
   .section-link, .section-link-icon, .section-link-icon svg { transition: none; }
   .section-link:hover .section-link-icon svg, .section-link:focus-visible .section-link-icon svg { transform: none; }
