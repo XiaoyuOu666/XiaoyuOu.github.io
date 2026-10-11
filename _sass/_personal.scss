@@ -167,6 +167,7 @@ h1, h2, h3 { color: var(--personal-heading); }
 .beyond-module .beyond-role { margin-bottom: 4px; }
 .beyond-module .beyond-date { margin-bottom: 14px; color: #999; font-size: .78rem; }
 .beyond-module ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.beyond-module li, .beyond-service-list abbr { color: var(--global-text-color-light); }
 .beyond-service-list abbr[title] { text-decoration: none; border-bottom: 0; cursor: help; }
 .beyond-module .beyond-interest-list { gap: 12px; }
 @media (min-width: 651px) and (max-width: 1100px) {
