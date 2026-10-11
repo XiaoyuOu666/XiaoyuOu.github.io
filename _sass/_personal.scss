@@ -206,6 +206,8 @@ h1, h2, h3 { color: var(--personal-heading); }
 .research-overview p { margin: 0; }
 .research-directions { margin-top: 32px; }
 .research-direction { padding: 36px 0 40px; border-top: 1px solid var(--global-divider-color); scroll-margin-top: 28px; }
+// Include the card's extended background in its hover area.
+.research-direction.module-hover::before { pointer-events: auto; }
 .research-direction-heading { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 22px; }
 .research-direction-heading .focus-number { flex: 0 0 32px; }
 .research-direction-heading h2 { font-size: 1.4rem; line-height: 1.35; letter-spacing: -.015em; margin: 1px 0 0; }
