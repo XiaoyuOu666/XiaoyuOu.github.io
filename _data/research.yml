@@ -3,9 +3,9 @@
   title: Finite-Blocklength Communications and URLLC
   description: Characterizing reliability, latency, and throughput trade-offs in short-packet transmission, and investigating how finite-blocklength constraints shape system design and achievable performance.
   work:
-    - studying reliability–latency–throughput trade-offs under finite blocklength constraints.
-    - Optimizing short-packet encoding and resource allocation in massive MIMO and RSMA systems.
-    - Quantifying sum-rate loss when infinite-blocklength resource allocations are used under finite-blocklength constraints.
+    - Characterizing achievable rates and decoding error probabilities in short-packet wireless communications.
+    - Investigating reliability, latency, and throughput trade-offs and their implications for transmission design in ultra-reliable low-latency communications systems.
+    - Optimizing coding rates, blocklength, and power allocation to improve reliability and transmission efficiency.
   papers:
     - key: ou2026reliable
       title: Reliable Uplink Transmission for Low-Throughput Massive MIMO Networks With Finite Blocklength
@@ -24,9 +24,9 @@
   title: Multiuser MIMO and Interference Management
   description: Designing multiuser MIMO transceivers for RSMA and NOMA to manage inter-user interference and improve transmission efficiency.
   work:
-    - Designing RSMA transceivers with finite successive interference cancellation (SIC) and cancellation errors.
-    - Managing uplink interference in massive MIMO-NOMA through group-level SIC.
-    - Developing dual-polarized multiuser transmission without SIC over correlated Rician channels.
+    - Designing precoding and receive-combining schemes for multiuser MIMO systems to separate user signals and reduce inter-user interference.
+    - Investigating the effects of spatial correlation, polarization, and imperfect channel state information on interference management and transceiver design.
+    - Developing low-complexity resource allocation algorithms for multiuser MIMO systems with rate-splitting multiple access and non-orthogonal multiple access.
   papers:
     - key: ou2026dual
       title: Uplink RSMA with Dual-Polarized Multi-User MIMO over Correlated Rician Channels in Finite Blocklength Regime
