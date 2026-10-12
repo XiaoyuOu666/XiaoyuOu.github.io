@@ -50,13 +50,16 @@
   type: time_table
   contents:
     - title: Outstanding Master's Thesis of Chongqing
+      institution: Chongqing Municipal Education Commission
       year: "2024"
     - title: University of Bristol PhD Scholarship in Electrical and Electronic Engineering
+      institution: University of Bristol
       year: "2023"
     - title: Outstanding Graduate of Chongqing
+      institution: Chongqing Municipal Education Commission
       year: "2023"
     - title: National Scholarship
-      institution: Ministry of Education of China
+      institution: Ministry of Education of the People’s Republic of China
       year: "2022"
 
 - title: Academic Service
